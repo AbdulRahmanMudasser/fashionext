@@ -1,6 +1,9 @@
+import 'package:fashionext/core/common/utils/app_routes.dart';
+import 'package:fashionext/core/common/utils/app_strings.dart';
 import 'package:fashionext/core/common/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,18 +19,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'FashioNext',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      debugShowCheckedModeBanner: false,
-      home:  Scaffold(
-        body: Center(
-          child: Text(Environment.googleApiKey),
-        ),
-      ),
+    return ScreenUtilInit(
+      designSize: MediaQuery.of(context).size,
+      minTextAdapt: true,
+      useInheritedMediaQuery: true,
+      splitScreenMode: false,
+      builder: (_, child) {
+        return MaterialApp.router(
+          title: AppStrings.kAppName,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          debugShowCheckedModeBanner: false,
+          routerConfig: router,
+        );
+      },
+      child: Text(Environment.googleApiKey),
     );
   }
 }

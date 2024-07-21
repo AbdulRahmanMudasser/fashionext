@@ -1,4 +1,6 @@
 class AppStrings {
+  static const String kAppName = "FashioNext";
+
   static const String kCategory = 'Category';
   static const String kCategories = 'Categories';
   static const String kNotifications = 'Notifications';
