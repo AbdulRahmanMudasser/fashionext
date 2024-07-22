@@ -8,17 +8,21 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Text("OnBoarding Screen"),
-          Text((context.watch<OnBoardNotifier>().selectedPage).toString()),
-          TextButton(
-            onPressed: () => context.read<OnBoardNotifier>().changePage = 15,
-            child: const Text("Change Page"),
-          ),
-        ],
+      body: Consumer<OnBoardNotifier>(
+        builder: (context, notifier, child) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Text("OnBoarding Screen"),
+              Text((notifier.selectedPage).toString()),
+              TextButton(
+                onPressed: () => notifier.changePage = 17,
+                child: const Text("Change Page"),
+              ),
+            ],
+          );
+        },
       ),
     );
   }
