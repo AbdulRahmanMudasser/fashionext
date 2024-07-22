@@ -1,9 +1,4 @@
 import 'package:fashionext/core/common/utils/app_colors.dart';
-import 'package:fashionext/core/common/utils/app_colors.dart';
-import 'package:fashionext/core/common/utils/app_colors.dart';
-import 'package:fashionext/core/common/utils/app_colors.dart';
-import 'package:fashionext/core/common/utils/app_colors.dart';
-import 'package:fashionext/core/common/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'app_style.dart';
