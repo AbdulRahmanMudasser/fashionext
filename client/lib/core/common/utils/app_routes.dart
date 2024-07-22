@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../src/entry point/views/entry_point.dart';
+import '../../../src/home screen/views/home_screen.dart';
+import '../../../src/onboarding screen/views/onboarding_screen.dart';
 import '../../../src/splash screen/views/splash_screen.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-
 final GoRouter _router = GoRouter(
-   navigatorKey: navigatorKey,
+  navigatorKey: navigatorKey,
   initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
       builder: (context, state) => const SplashScreen(),
     ),
+
+    GoRoute(
+      path: '/onboarding',
+      builder: (context, state) => const OnBoardingScreen(),
+    ),
+
     GoRoute(
       path: '/home',
-      builder: (context, state) => EntryPoint(),
+      builder: (context, state) => const HomeScreen(),
     ),
-    // GoRoute(
-    //   path: '/onboarding',
-    //   builder: (context, state) => const OnBoardingScreen(),
-    // ),
     // GoRoute(
     //   path: '/review',
     //   builder: (context, state) => const ReviewsPage(),
