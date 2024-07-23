@@ -1,6 +1,4 @@
 import 'package:fashionext/core/common/utils/app_colors.dart';
-import 'package:fashionext/core/common/utils/app_colors.dart';
-import 'package:fashionext/core/common/utils/app_colors.dart';
 import 'package:fashionext/core/common/widgets/reusable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,7 +37,10 @@ class GradientBtn extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius ?? 6),
           color: btnColor ?? AppColors.kPrimaryLight,
-          border: Border.all(width: 0.5.h, color: borderColor ?? AppColors.kWhite),
+          border: Border.all(
+            width: 0.5.h,
+            color: borderColor ?? AppColors.kWhite,
+          ),
         ),
         child: Center(
           child: Padding(
