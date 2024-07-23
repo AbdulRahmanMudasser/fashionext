@@ -37,8 +37,10 @@ class GradientBtn extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius ?? 6),
           color: btnColor ?? AppColors.kPrimaryLight,
-          border:
-              Border.all(width: 0.5.h, color: borderColor ?? AppColors.kWhite),
+          border: Border.all(
+            width: 0.5.h,
+            color: borderColor ?? AppColors.kWhite,
+          ),
         ),
         child: Center(
           child: Padding(
