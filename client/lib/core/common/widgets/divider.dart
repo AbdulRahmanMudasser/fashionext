@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Divida extends StatelessWidget {
-  const Divida({
-    Key? key,
-  }) : super(key: key);
+class CustomDivider extends StatelessWidget {
+  const CustomDivider({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:fashionext/core/common/utils/app_colors.dart';
 import 'package:fashionext/core/common/widgets/custom_button.dart';
-import 'package:fashionext/src/onboarding%20screen/models/onboard_model.dart';
+import 'package:fashionext/src/onboarding/models/onboard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -74,7 +74,7 @@ class OnBoardingThirdScreen extends StatelessWidget {
                 // Storage().setBool('firsttime', true);
 
                 // Navigate to Home Screen
-                context.go('/home');
+                context.go('/appentrypoint');
               },
             ),
 
@@ -85,6 +85,7 @@ class OnBoardingThirdScreen extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 // Navigate to Login Page
+                context.go('/login');
               },
               child: RichText(
                 text: TextSpan(
