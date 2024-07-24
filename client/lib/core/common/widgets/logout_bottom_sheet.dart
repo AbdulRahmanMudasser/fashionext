@@ -23,9 +23,11 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
               height: 10.h,
             ),
             Center(
-                child: ReusableText(
-                    text: AppStrings.kLogout,
-                    style: AppStyle(16, AppColors.kPrimary, FontWeight.w500),),),
+              child: ReusableText(
+                text: AppStrings.kLogout,
+                style: AppStyle(16, AppColors.kPrimary, FontWeight.w500),
+              ),
+            ),
             SizedBox(
               height: 10.h,
             ),
@@ -37,9 +39,11 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
               height: 10.h,
             ),
             Center(
-                child: ReusableText(
-                    text: AppStrings.kLogoutText,
-                    style: AppStyle(14, AppColors.kGray, FontWeight.w500),),),
+              child: ReusableText(
+                text: AppStrings.kLogoutText,
+                style: AppStyle(14, AppColors.kGray, FontWeight.w500),
+              ),
+            ),
             SizedBox(
               height: 20.h,
             ),
@@ -61,8 +65,9 @@ Future<dynamic> logoutBottomSheet(BuildContext context) {
                     text: "Yes, Logout",
                     onTap: () {
                       Storage().removeKey('accessToken');
-                      /// TODO: TabIndexNotifier
-                      // context.read<TabIndexNotifier>().tabIndex = 0;
+
+                      /// TODO: BottomNavNotifier
+                      // context.read<BottomNavNotifier>().tabIndex = 0;
                       context.go("/home");
                       context.pop();
                     },

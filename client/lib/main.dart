@@ -1,7 +1,8 @@
 import 'package:fashionext/core/common/utils/app_routes.dart';
 import 'package:fashionext/core/common/utils/app_strings.dart';
 import 'package:fashionext/core/common/utils/environment.dart';
-import 'package:fashionext/src/onboarding%20screen/controllers/onboard_notifier.dart';
+import 'package:fashionext/src/app%20entry%20point/controllers/bottom_nav_notifier.dart';
+import 'package:fashionext/src/onboarding/controllers/onboard_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -9,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 
-import 'src/splash screen/views/splash_screen.dart';
+import 'src/splash/views/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,9 +35,8 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => OnBoardNotifier(),
-        ),
+        ChangeNotifierProvider(create: (_) => OnBoardNotifier()),
+        ChangeNotifierProvider(create: (_) => BottomNavNotifier()),
       ],
       child: const MyApp(),
     ),

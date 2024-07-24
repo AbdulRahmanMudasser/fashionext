@@ -1,4 +1,4 @@
-import 'package:fashionext/src/onboarding%20screen/models/onboard_model.dart';
+import 'package:fashionext/src/onboarding/models/onboard_model.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
