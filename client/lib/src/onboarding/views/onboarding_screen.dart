@@ -100,10 +100,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
 
                         // Right Icon
-                        const Icon(
-                          AntDesign.rightcircleo,
-                          color: AppColors.kPrimary,
-                          size: 30,
+                        GestureDetector(
+                          onTap: () {
+                            _pageController.animateToPage(
+                              context.read<OnBoardNotifier>().selectedPage + 1,
+                              duration: const Duration(milliseconds: 200),
+                              curve: Curves.easeIn,
+                            );
+                          },
+                          child: const Icon(
+                            AntDesign.rightcircleo,
+                            color: AppColors.kPrimary,
+                            size: 30,
+                          ),
                         ),
                       ],
                     ),

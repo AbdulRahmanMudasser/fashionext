@@ -23,7 +23,7 @@ class OnBoardingSecondScreen extends StatelessWidget {
 
           // Text
           Positioned(
-            bottom: 0.2.sh,
+            bottom: 185.h,
             left: 30,
             right: 30,
             child: Text(

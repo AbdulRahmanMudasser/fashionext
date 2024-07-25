@@ -21,14 +21,14 @@ class OnBoardingThirdScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 100.h,
+              height: 90.h,
             ),
 
             // Image
             Image.asset(OnBoardModel.onboardList[2].image),
 
             SizedBox(
-              height: 20.h,
+              height: 30.h,
             ),
 
             // Header Text
@@ -43,7 +43,7 @@ class OnBoardingThirdScreen extends StatelessWidget {
             ),
 
             SizedBox(
-              height: 45.h,
+              height: 35.h,
             ),
 
             SizedBox(
@@ -60,7 +60,7 @@ class OnBoardingThirdScreen extends StatelessWidget {
             ),
 
             SizedBox(
-              height: 40.h,
+              height: 90.h,
             ),
 
             GradientBtn(
@@ -79,7 +79,7 @@ class OnBoardingThirdScreen extends StatelessWidget {
             ),
 
             SizedBox(
-              height: 20.h,
+              height: 30.h,
             ),
 
             GestureDetector(
