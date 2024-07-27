@@ -2,6 +2,7 @@ import 'package:fashionext/core/common/utils/app_routes.dart';
 import 'package:fashionext/core/common/utils/app_strings.dart';
 import 'package:fashionext/core/common/utils/environment.dart';
 import 'package:fashionext/src/app%20entry%20point/controllers/bottom_nav_notifier.dart';
+import 'package:fashionext/src/categories/controllers/category_notifier.dart';
 import 'package:fashionext/src/onboarding/controllers/onboard_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -37,6 +38,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => OnBoardNotifier()),
         ChangeNotifierProvider(create: (_) => BottomNavNotifier()),
+        ChangeNotifierProvider(create: (_) => CategoryNotifier())
       ],
       child: const MyApp(),
     ),
@@ -57,7 +59,8 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           title: AppStrings.kAppName,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            scaffoldBackgroundColor: Colors.white,
+            appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
             useMaterial3: true,
           ),
           debugShowCheckedModeBanner: false,

@@ -1,10 +1,14 @@
-import 'package:fashionext/src/app%20entry%20point/views/app_entry_point.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../src/app entry point/views/app_entry_point.dart';
 import '../../../src/auth/views/login_screen.dart';
+import '../../../src/categories/views/categories_screen.dart';
+import '../../../src/categories/views/category_screen.dart';
 import '../../../src/home/views/home_screen.dart';
+import '../../../src/notification/notification_screen.dart';
 import '../../../src/onboarding/views/onboarding_screen.dart';
+import '../../../src/search/views/search_screen.dart';
 import '../../../src/splash/views/splash_screen.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -38,6 +42,26 @@ final GoRouter _router = GoRouter(
       builder: (context, state) => const LoginScreen(),
     ),
 
+    GoRoute(
+      path: '/notifications',
+      builder: (context, state) => const NotificationScreen(),
+    ),
+
+    GoRoute(
+      path: '/search',
+      builder: (context, state) => const SearchScreen(),
+    ),
+
+    GoRoute(
+      path: '/categories',
+      builder: (context, state) => const CategoriesScreen(),
+    ),
+
+    GoRoute(
+      path: '/category',
+      builder: (context, state) => const CategoryScreen(),
+    ),
+
     // GoRoute(
     //   path: '/review',
     //   builder: (context, state) => const ReviewsPage(),
@@ -51,10 +75,6 @@ final GoRouter _router = GoRouter(
     //   builder: (context, state) => const VerificationPage(),
     // ),
     // GoRoute(
-    //   path: '/search',
-    //   builder: (context, state) => const SearchPage(),
-    // ),
-    // GoRoute(
     //   path: '/help',
     //   builder: (context, state) => const HelpCenterPage(),
     // ),
@@ -65,14 +85,6 @@ final GoRouter _router = GoRouter(
     // GoRoute(
     //   path: '/register',
     //   builder: (context, state) => const RegistrationPage(),
-    // ),
-    // GoRoute(
-    //   path: '/categories',
-    //   builder: (context, state) => const CategoriesPage(),
-    // ),
-    //  GoRoute(
-    //   path: '/category',
-    //   builder: (context, state) => const CategoryPage(),
     // ),
     //
     // GoRoute(
@@ -85,10 +97,6 @@ final GoRouter _router = GoRouter(
     //   builder: (context, state) => const AddressesListPage(),
     // ),
     //
-    //  GoRoute(
-    //   path: '/notifications',
-    //   builder: (context, state) => const NotificationPage(),
-    // ),
     //
     //  GoRoute(
     //   path: '/tracking',

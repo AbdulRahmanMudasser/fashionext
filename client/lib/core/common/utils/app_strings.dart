@@ -11,6 +11,8 @@ class AppStrings {
   static const String kVerify = 'Verification Code';
   static const String kVerifyText = 'Please enter the code we just sent to email';
   static const String kSearch = 'Search';
+  static const String kSearchProducts = 'Search Products';
+  static const String kEnterLocation = "Please Select a Location";
   static const String kGetStarted = "Let's Get Started";
   static const String kAlreadyHaveAccount = "Already have an account? ";
   static const String kSignIn = "Sign In";
@@ -18,10 +20,11 @@ class AppStrings {
   static const String kProfilePic = 'https://d326fntlu7tb1e.cloudfront.net/uploads/0856609b-21e8-4e73-85cb-1f9a93de81f4-avatar.png';
 
   static const String kCollection = 'New Collection';
+  static const String kDiscount = "Discount 50% off the first transaction";
   static const String kPolicy = 'Privacy Policy';
   static const String kCancelation = 'Cancelation Policy';
   static const String kTerms = 'Terms & Conditions';
-  static const String kHomeBtn = 'Shop Now';
+  static const String kShopNow = 'Shop Now';
   static const String kViewAll = 'See All';
   static const String kFlash = 'Flash Sales';
   static const String kWishlist = 'Wishlist';
@@ -36,6 +39,7 @@ class AppStrings {
   static const String kStatus = 'Order Status';
   static const String kDetails = 'Order Details';
   static const String kLocation = 'What is Your Location';
+  static const String kLocationText = 'Location';
   static const String kLocationButton = 'Add Address';
   static const String kCart = 'Cart';
   static const String kCheckout = 'Checkout';
