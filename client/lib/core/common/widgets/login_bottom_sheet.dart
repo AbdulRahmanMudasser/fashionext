@@ -14,13 +14,16 @@ Future<dynamic> loginBottomSheet(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return Container(
-        height: 200,
-        decoration: BoxDecoration(borderRadius: kRadiusTop),
+        height: 180,
+        decoration: BoxDecoration(
+          borderRadius: kRadiusTop,
+          color: Colors.white,
+        ),
         child: ListView(
           physics: const NeverScrollableScrollPhysics(),
           children: [
             SizedBox(
-              height: 10.h,
+              height: 16.h,
             ),
             Center(
               child: ReusableText(
@@ -29,7 +32,7 @@ Future<dynamic> loginBottomSheet(BuildContext context) {
               ),
             ),
             SizedBox(
-              height: 10.h,
+              height: 6.h,
             ),
             Divider(
               color: AppColors.kGrayLight,
@@ -41,21 +44,21 @@ Future<dynamic> loginBottomSheet(BuildContext context) {
             Center(
               child: ReusableText(
                 text: AppStrings.kLoginText,
-                style: AppStyle(14, AppColors.kGray, FontWeight.w500),
+                style: AppStyle(13, AppColors.kGray, FontWeight.w500),
               ),
             ),
             SizedBox(
               height: 20.h,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 50.w),
               child: GradientBtn(
                 text: "Proceed to Login",
                 onTap: () {
-                  context.go("/login");
+                  context.push("/login");
                 },
                 btnHeight: 35.h,
-                radius: 16,
+                radius: 10,
                 btnWidth: ScreenUtil().screenWidth,
               ),
             )
